@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const getPostPath = (id: string) => `/posts/${id.replace(/\.md$/, "")}/`;
+---
+
+<BaseLayout
+  title="Posts | Xiaochang Miao"
+  description="All published posts on machine learning, engineering, systems, and technical notes."
+>
+  <section class="page-intro">
+    <p class="eyebrow">Archive</p>
+    <h1>All posts.</h1>
+    <p class="hero-copy">
+      A running list of technical write-ups, implementation notes, and smaller
+      thoughts worth keeping.
+    </p>
+  </section>
+
+  <section class="posts-section">
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="post-card">
+          <p class="post-meta">
+            <time datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+          </p>
+          <h2>
+            <a href={getPostPath(post.id)}>{post.data.title}</a>
+          </h2>
+          <p>{post.data.description}</p>
+          {post.data.tags.length > 0 && (
+            <ul class="tag-list" aria-label={`Tags for ${post.data.title}`}>
+              {post.data.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

@@ -1,0 +1,93 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const intro =
+  "Technical notes on machine learning, language models, retrieval, ranking, and engineering work that becomes clearer after writing it down.";
+
+const getPostPath = (id: string) => `/posts/${id.replace(/\.md$/, "")}/`;
+---
+
+<BaseLayout title="Xiaochang Miao" description={intro}>
+  <section class="hero">
+    <p class="eyebrow">Tech Blog</p>
+    <h1>Working notes on ML systems, LLMs, and engineering.</h1>
+    <p class="hero-copy">{intro}</p>
+    <div class="hero-actions">
+      <a class="button-primary" href="/posts/">Browse posts</a>
+      <a class="button-secondary" href="/about/">About this site</a>
+    </div>
+  </section>
+
+  <section class="topic-grid" aria-label="Topics covered on this blog">
+    <article class="topic-card">
+      <p class="topic-label">Focus</p>
+      <h2>Machine learning systems</h2>
+      <p>
+        Training loops, data pipelines, model behavior, and the implementation
+        details that usually matter more than expected.
+      </p>
+    </article>
+    <article class="topic-card">
+      <p class="topic-label">Ongoing</p>
+      <h2>LLMs and retrieval</h2>
+      <p>
+        Agent workflows, evals, indexing, search quality, and the tradeoffs
+        between something clever and something reliable.
+      </p>
+    </article>
+    <article class="topic-card">
+      <p class="topic-label">Format</p>
+      <h2>Short notes count</h2>
+      <p>
+        Not every post needs to be a tutorial. Some entries here should just pin
+        down one lesson, one mistake, or one decision that mattered.
+      </p>
+    </article>
+  </section>
+
+  <section class="posts-section">
+    <div class="section-heading">
+      <h2>Recent posts</h2>
+      <p>{posts.length} published so far.</p>
+    </div>
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="post-card">
+          <p class="post-meta">
+            <time datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+          </p>
+          <h3>
+            <a href={getPostPath(post.id)}>{post.data.title}</a>
+          </h3>
+          <p>{post.data.description}</p>
+          {post.data.tags.length > 0 && (
+            <ul class="tag-list" aria-label={`Tags for ${post.data.title}`}>
+              {post.data.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="page-block writing-rule">
+    <p class="eyebrow">Writing Rule</p>
+    <p>
+      A post is good enough if it explains the setup, the confusing part, and
+      what turned out to matter.
+    </p>
+  </section>
+</BaseLayout>
