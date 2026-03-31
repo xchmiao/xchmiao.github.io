@@ -6,8 +6,7 @@ const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
-const intro =
-  "Technical notes on machine learning, language models, retrieval, ranking, and engineering work that becomes clearer after writing it down.";
+const intro = "ML systems, LLMs, retrieval, ranking, and engineering notes.";
 
 const getPostPath = (id: string) => `/posts/${id.replace(/\.md$/, "")}/`;
 ---
@@ -15,8 +14,10 @@ const getPostPath = (id: string) => `/posts/${id.replace(/\.md$/, "")}/`;
 <BaseLayout title="Xiaochang Miao" description={intro}>
   <section class="hero">
     <p class="eyebrow">Tech Blog</p>
-    <h1>Working notes on ML systems, LLMs, and engineering.</h1>
-    <p class="hero-copy">{intro}</p>
+    <div class="hero-heading">
+      <h1>Xiaochang Miao</h1>
+      <p class="hero-copy">{intro}</p>
+    </div>
     <div class="hero-actions">
       <a class="button-primary" href="/posts/">Browse posts</a>
       <a class="button-secondary" href="/about/">About this site</a>
