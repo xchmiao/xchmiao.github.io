@@ -24,31 +24,11 @@ const getPostPath = (id: string) => `/posts/${id.replace(/\.md$/, "")}/`;
     </div>
   </section>
 
-  <section class="topic-grid" aria-label="Topics covered on this blog">
-    <article class="topic-card">
-      <p class="topic-label">Focus</p>
-      <h2>Machine learning systems</h2>
-      <p>
-        Training loops, data pipelines, model behavior, and the implementation
-        details that usually matter more than expected.
-      </p>
-    </article>
-    <article class="topic-card">
-      <p class="topic-label">Ongoing</p>
-      <h2>LLMs and retrieval</h2>
-      <p>
-        Agent workflows, evals, indexing, search quality, and the tradeoffs
-        between something clever and something reliable.
-      </p>
-    </article>
-    <article class="topic-card">
-      <p class="topic-label">Format</p>
-      <h2>Short notes count</h2>
-      <p>
-        Not every post needs to be a tutorial. Some entries here should just pin
-        down one lesson, one mistake, or one decision that mattered.
-      </p>
-    </article>
+  <section class="page-block prose-block home-note">
+    <p>
+      This blog is for technical notes, implementation lessons, and the smaller
+      ideas that are worth keeping before they turn vague.
+    </p>
   </section>
 
   <section class="posts-section">
@@ -82,13 +62,5 @@ const getPostPath = (id: string) => `/posts/${id.replace(/\.md$/, "")}/`;
         </li>
       ))}
     </ul>
-  </section>
-
-  <section class="page-block writing-rule">
-    <p class="eyebrow">Writing Rule</p>
-    <p>
-      A post is good enough if it explains the setup, the confusing part, and
-      what turned out to matter.
-    </p>
   </section>
 </BaseLayout>
