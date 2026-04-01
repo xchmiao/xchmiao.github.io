@@ -1,5 +1,5 @@
 ---
-title: "Welcome 🔭"
+title: "About This Blog"
 description: "A place to jot down thoughts that seem worth keeping around."
 date: 2026-01-10
 heroImage: "/images/about-blog/blog.png"
