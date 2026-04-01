@@ -1,33 +1,17 @@
 ---
-title: "Welcome to my blog"
-description: "What this site is for and how I plan to use it."
-date: 2026-03-30
+title: "About This Blog"
+description: "A place to jot down thoughts that seem worth keeping around."
+date: 2026-01-10
 tags:
   - meta
   - writing
 draft: false
 ---
 
-I want this site to stay useful to me first.
+This blog is where I put thoughts I don't want to lose.
 
-That means a mix of:
+I was trained in physics, which probably explains some of my habits. Physics gave me a lasting suspicion of explanations that add more pieces than they need, and a deep affection for the ones that make those pieces feel less arbitrary.
 
-- technical write-ups after building something
-- short notes when I learn a clean idea
-- rough thoughts that are not yet polished into a full article
+That instinct stayed with me even after I wandered into machine learning. I'm usually less interested in isolated results than in the ideas that make a lot of other things suddenly click. Sometimes that means a technical post. Sometimes it means a short note, a half-formed intuition, or a question that is still bothering me a week later.
 
-## What to expect
-
-Most posts here will likely be about machine learning, engineering, systems, and the small practical lessons that tend to matter more than they look.
-
-I do not want every post to become a giant tutorial. Some should just capture one useful point clearly and move on.
-
-## Writing rule
-
-If I can explain:
-
-- what I was trying to do
-- what was confusing
-- what turned out to matter
-
-then that is already enough for a post.
+I don't expect this blog to stay neatly inside any one topic. Mostly, it's a place to jot things down, follow interesting patterns, and keep track of ideas that still seem true after sitting with them for a while.
