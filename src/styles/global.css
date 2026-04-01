@@ -227,6 +227,18 @@ h1 {
   letter-spacing: 0;
 }
 
+.post-hero-figure {
+  margin: 1rem 0 0;
+}
+
+.post-hero-image {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin: 0;
+  border-radius: 18px;
+}
+
 .post-date-pill {
   margin: 0.75rem 0 0;
 }
@@ -301,7 +313,7 @@ h1 {
 
 .post-body img {
   display: block;
-  max-width: 100%;
+  max-width: 86%;
   height: auto;
   margin: 1.5rem auto;
 }

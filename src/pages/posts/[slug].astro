@@ -29,6 +29,15 @@ const { Content, headings } = await render(post);
         </time>
       </p>
       <p class="post-description">{post.data.description}</p>
+      {post.data.heroImage && (
+        <figure class="post-hero-figure">
+          <img
+            class="post-hero-image"
+            src={post.data.heroImage}
+            alt={post.data.heroImageAlt ?? ""}
+          />
+        </figure>
+      )}
     </header>
     {headings.length > 0 && (
       <details class="post-toc">
