@@ -4,9 +4,7 @@ description: "A place to jot down thoughts that seem worth keeping around."
 date: 2026-01-10
 heroImage: "/images/about-blog/blog.png"
 heroImageAlt: "Portrait image for the About This Blog post."
-tags:
-  - meta
-  - writing
+tags: []
 draft: false
 ---
 
