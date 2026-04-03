@@ -12,11 +12,13 @@ draft: false
 
 ## Introduction
 
-In hindsight, CLIP feels less like a model milestone than like an early outline of a new paradigm. What it offered was not just a better vision system, but a different recipe: train for generality, learn a shared representation, and let downstream use emerge more flexibly at inference time.
+CLIP came out a few years ago, but I only went back and read the paper carefully last summer.
 
-That felt fundamentally different from the older model-development pattern, where systems were usually built around a fixed task, a fixed label space, or a narrow domain. Looking back, what matters most is not any single benchmark result, but the shift in what the model was trying to produce in the first place.
+In hindsight, CLIP feels less to me like a model milestone than like an early outline of a new paradigm. What it offered was not just a better vision system, but a different recipe: train for generality, learn a shared representation, and let downstream use emerge more flexibly at inference time.
 
-So this post is not a comparison with large language models. It is a technical retrospective centered on a narrower question:
+That felt fundamentally different from the classic model-development pattern, where systems were usually built around a fixed task, a fixed label space, or a narrow domain. Looking back, what stays with me is not any single benchmark result, but the shift in what the model was trying to produce in the first place.
+
+So this post is not a comparison with large language models. It is centered on a narrower question:
 
 What did CLIP actually prove, and why did those ideas matter for the systems that came after?
 
