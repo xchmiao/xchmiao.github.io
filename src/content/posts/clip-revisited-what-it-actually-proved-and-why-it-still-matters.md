@@ -140,29 +140,11 @@ That objective gives the model a different kind of generality. Instead of learni
 
 So the connection is not that CLIP and large language models solve the same problem. It is that both move away from narrow task-specific systems, but they do so with different training objectives and different kinds of outputs.
 
-## 5. What CLIP Did Not Solve
-
-CLIP does not model:
-
-- sequential structure
-- causality
-- compositional reasoning
-
-It cannot:
-
-- generate explanations
-- perform multi-step reasoning
-- maintain long-horizon coherence
-
-Contrastive alignment produces strong semantic geometry, but not a full generative model of the world.
-
-That is one reason large language models still matter.
-
 ## Conclusion
 
-Looking back, CLIP matters less to me as a vision model than as an early sign of a new paradigm: express supervision through natural language, train for generality rather than a specific task, and let inference-time prompting define the task. These ideas feel standard now. They did not at the time.
+Looking back, what stays with me about CLIP is not any single benchmark result, but the claim it made plausible: that large-scale weak supervision could be enough to learn a task-agnostic representation. That feels more important to me now than the original transfer story.
 
-> CLIP did not show how to generate the world. It showed that images and language could be aligned, at scale, into a shared representation.
+> CLIP did not show how to generate the world. It showed that images and language could be aligned, at scale, into a shared representation that transferred surprisingly well across tasks.
 
 ## References
 
