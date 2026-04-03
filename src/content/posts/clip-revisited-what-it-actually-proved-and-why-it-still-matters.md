@@ -122,7 +122,7 @@ Put together, they point to a broader claim:
 
 ### 4.2 Scaling with Weak Structure
 
-CLIP showed that noisy, weakly structured supervision could still produce strong representations when scaled. In practice, that means you do not always need to retrain a bespoke model for each new task. Sometimes you can get surprisingly far by changing the prompts, changing the retrieval setup, or adding a thin layer on top of frozen embeddings. That is not a universal recipe, but it does feel different from the older train-a-new-head-for-each-task workflow.
+CLIP showed that weakly structured supervision was not merely a noisier substitute for dense labels. By removing some of the prescriptive constraints built into task-specific supervision, it opened the door to a simpler and broader training objective. With enough data and compute, that objective was enough to produce a strong general representation.
 
 ### 4.3 Different Objectives
 
