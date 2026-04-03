@@ -88,7 +88,15 @@ This is very consistent with what Richard Sutton argued:
 
 What made CLIP so striking was that this did not remain a nice transfer story in principle. OpenAI evaluated CLIP on over 30 datasets, and their best model outperformed the strongest publicly available ImageNet model on 20 of 26 transfer datasets under linear evaluation. Once scaled with enough data and compute, the more general model became strong enough to beat narrower, task-specific models even on benchmarks those models had been explicitly optimized for.
 
+![Zero-shot robustness under natural distribution shift from the CLIP paper.](/images/clip-paper/zs-clip-vs-imagenet-robustness-datasets_page1.png)
+
+*Figure: Zero-shot CLIP holds up much better than standard ImageNet models under natural distribution shift. That result matters here because it suggests the learned representation was not only broad, but also less tied to the quirks of a single benchmark distribution.*
+
 It is also worth making the distinction between zero-shot transfer and linear evaluation explicit. Zero-shot means the task is specified entirely through prompts at inference time. Linear evaluation is stricter in a different way: freeze the representation, train a simple linear classifier on top, and ask how much useful structure is already present in the embedding. CLIP looked strong under both views, which is part of why it was hard to dismiss as just prompt hacking.
+
+![Zero-shot CLIP performance plotted against linear-probe CLIP performance.](/images/clip-paper/zs-vs-linear-clip_page1.png)
+
+*Figure: Zero-shot performance tracks linear-probe performance surprisingly well across datasets. That is part of what made CLIP feel like more than a prompt trick: much of the task-relevant structure was already present in the embedding.*
 
 ## 3. Representation as a System Primitive
 
