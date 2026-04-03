@@ -1,6 +1,6 @@
 ---
 title: "Revisiting CLIP: The Early Shape of a New Paradigm"
-description: "A technical retrospective on what CLIP proved and the paradigm it foreshadowed."
+description: "A technical reflection on what CLIP proved and the paradigm it foreshadowed."
 date: 2026-02-10
 tags:
   - multimodal
@@ -12,9 +12,9 @@ draft: false
 
 ## Introduction
 
-CLIP is one of those papers that feels different a few years later. By the time I went back to it last summer, it already felt like a foundational embedding model, in the way word2vec or BERT had felt in earlier years: not just a paper result, but a representation model whose embeddings could be used as input features in practical retrieval and ranking models.
+In hindsight, CLIP feels less like a model milestone than like an early outline of a new paradigm. What it offered was not just a better vision system, but a different recipe: train for generality, learn a shared representation, and let downstream use emerge more flexibly at inference time.
 
-CLIP suggested that, with enough data and compute, it might be possible to brute-force a genuinely general representation, one learned through the alignment of images and language rather than through task-specific labeling. That felt fundamentally different from the classic model-development pattern, where systems were usually built for a specific task or domain.
+That felt fundamentally different from the older model-development pattern, where systems were usually built around a fixed task, a fixed label space, or a narrow domain. Looking back, what matters most is not any single benchmark result, but the shift in what the model was trying to produce in the first place.
 
 So this post is not a comparison with large language models. It is a technical retrospective centered on a narrower question:
 
